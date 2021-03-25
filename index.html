@@ -19,6 +19,7 @@
 
   <div id="root">
 
+
     <div class="carousel_wrapper">
 
       <div class="carousel_container">
@@ -27,13 +28,9 @@
           <i @click="prevImage" class="arrow fas fa-chevron-left"></i>
         </div>
 
-
-
         <div class="imgs_container">
           <img v-bind:src="images[imgIndex]" alt="">
         </div>
-
-
 
         <div class="right_arrow">
           <i @click="nextImage" class="arrow fas fa-chevron-right"></i>
@@ -41,7 +38,13 @@
 
       </div>
 
+      <div class="bullets_container">
+        <i class="bull fas fa-circle" v-for="item in images"></i>
+      </div>
+
     </div>
+
+
 
   </div>
 

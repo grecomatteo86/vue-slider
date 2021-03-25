@@ -7,11 +7,13 @@
   height: 100vh;
   background-color: pink;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .carousel_container{
   height: 400px;
   width: 500px;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,4 +36,18 @@ img{
   height: 100%;
   object-fit: cover;
   object-position: top;
+}
+.bullets_container{
+  position: absolute;
+  bottom:10%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 20px;
+}
+.bull{
+  color: black;
+  padding: 0 5px;
+}
+.active{
+  color: pink;
 }
