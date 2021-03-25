@@ -20,6 +20,7 @@
   font-size: 40px;
   flex-basis: 5%;
   margin: 10px;
+  cursor: pointer;
 }
 .imgs_container{
   height: 100%;
