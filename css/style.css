@@ -51,3 +51,62 @@ img{
 .active{
   color: pink;
 }
+
+
+
+body{
+  position: relative;
+  font-family: 'Train One', cursive;
+}
+.nero {
+  height: 600px;
+  width: 700px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title_one{
+  color: pink;
+  font-size: 30px;
+}
+.title_two{
+  color: black;
+  font-size: 0px;
+  z-index: 5;
+}
+.svg_container{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom:20%;
+}
+.svg_container>img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: white;
+  cursor: pointer;
+}
+.disappear{
+  font-size: 0;
+  transition: all 2s;
+}
+.appear{
+  font-size: 50px;
+  transition: 4s all 2s;
+}
+.background_pink{
+  background-color: pink;
+  border: 5px solid black;
+  transition: 2s all 2s;
+}
+.none{
+  display: none;
+}

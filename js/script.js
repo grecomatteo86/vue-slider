@@ -31,3 +31,23 @@ var app = new Vue (
     }
   }
 );
+
+const premi = document.getElementById('premi');
+
+premi.addEventListener('click', () => {
+
+  setTimeout (x,6000);
+
+  const titolo = document.getElementById('titolo_uno');
+  const ground = document.getElementById('ground');
+  const titoloDue = document.getElementById('titolo_due');
+
+  titolo.classList.add("disappear");
+  ground.classList.add("background_pink");
+  titoloDue.classList.add("appear");
+
+  function x() {
+    ground.classList.add("none");
+  }
+
+});
