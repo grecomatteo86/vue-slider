@@ -39,7 +39,7 @@
       </div>
 
       <div class="bullets_container">
-        <i class="bull fas fa-circle" v-for="item in images"></i>
+        <i class="bull fas fa-circle" v-for="(item,index) in images" v-bind:class=" imgIndex == index ? 'active' : '' "></i>
       </div>
 
     </div>
