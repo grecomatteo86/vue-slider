@@ -39,10 +39,11 @@ img{
 }
 .bullets_container{
   position: absolute;
-  bottom:10%;
+  bottom:5%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 20px;
+  cursor: pointer;
 }
 .bull{
   color: rgba(0, 0, 0, 0.5);
@@ -58,7 +59,7 @@ body{
   position: relative;
   font-family: 'Train One', cursive;
 }
-.nero {
+.introduction_box {
   height: 600px;
   width: 700px;
   background-color: black;

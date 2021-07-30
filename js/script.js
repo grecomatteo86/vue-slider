@@ -3,13 +3,13 @@ var app = new Vue (
     el:'#root',
     data:{
       images:[
-        'https://gdsit.cdn-immedia.net/2016/05/toni9.jpg',
-        'https://media.gettyimages.com/photos/palermo-italy-palermos-midfielder-eugenio-corini-jubilates-after-he-picture-id72512833?k=6&m=72512833&s=612x612&w=0&h=mf67qFxY_b15F9sizDdlHChEJh8o7JG9jNUNhp-OFOQ=',
-        'https://www.rosanerolive.it/wp-content/uploads/2020/05/barzagli-533x261.jpg',
-        'https://media.gettyimages.com/photos/franco-brienza-of-palermo-celebrates-after-scoring-his-teams-second-picture-id155010917?k=6&m=155010917&s=612x612&w=0&h=456KWsprF4caOq8-OVjr5IsAy7xhNE4nwZ4WF_g17rs=',
-        'https://media.gettyimages.com/photos/palermo-italy-palermos-christian-zaccardo-jubilates-after-he-scored-a-picture-id72411644?k=6&m=72411644&s=612x612&w=0&h=5z817t81Ce74X5iRbzzJ6L9-6KnSrqfa5r-hlwH6BsA=',
-        'https://media.gettyimages.com/photos/palermo-italy-palermos-fabio-simplicio-of-brazil-jubilates-after-he-picture-id72785934?k=6&m=72785934&s=612x612&w=0&h=FBnEnUo4CCmwtqxacg1tE2F6zPtAA2P5U5WWAJonU3U=',
-        'https://media.gettyimages.com/photos/salvo-ficarra-and-valentino-picone-pose-during-a-us-citta-di-palermo-picture-id464030392?k=6&m=464030392&s=612x612&w=0&h=dMXjivZNM24e0CWKuYIew5RMRmxX73nxD4097zUeFKU='
+        'img/toni9.jpeg',
+        'img/corini.jpeg',
+        'img/barzagli.jpeg',
+        'img/brienza.jpeg',
+        'img/zaccardo.jpeg',
+        'img/simplicio.jpeg',
+        'img/ficarrapicone.jpeg'
       ],
       imgIndex:0
     },
@@ -19,35 +19,26 @@ var app = new Vue (
         if (this.imgIndex == this.images.length) {
           this.imgIndex = 0;
         }
-
       },
       prevImage: function (){
         this.imgIndex--;
         if (this.imgIndex < 0) {
           this.imgIndex = this.images.length - 1;
         }
-
       }
     }
   }
 );
-
-const premi = document.getElementById('premi');
-
-premi.addEventListener('click', () => {
-
-  setTimeout (x,6000);
-
-  const titolo = document.getElementById('titolo_uno');
+const cta = document.getElementById('click');
+cta.addEventListener('click', () => {
+  setTimeout (x,8000);
+  const firstTitle = document.getElementById('first_title');
   const ground = document.getElementById('ground');
-  const titoloDue = document.getElementById('titolo_due');
-
-  titolo.classList.add("disappear");
+  const secondTitle = document.getElementById('second_title');
+  firstTitle.classList.add("disappear");
   ground.classList.add("background_pink");
-  titoloDue.classList.add("appear");
-
+  secondTitle.classList.add("appear");
   function x() {
     ground.classList.add("none");
   }
-
 });

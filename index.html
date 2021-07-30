@@ -4,66 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- google_font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
-  <!-- /google_font -->
-  <!-- font_awesome_cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-  <!-- /font_awesome_cdn -->
-  <!-- vue_cdn -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <!-- /vue_cdn -->
-  <!-- stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  <!-- /stylesheet -->
   <title>Vue Slider</title>
 </head>
 <body>
-
-  <div id="ground" class="nero">
-
-    <h2 id="titolo_uno" class="title_one">Quando tutti vedevano solo nero</h2>
-    <h2 id="titolo_due" class="title_two">Noi vedevamo anche rosa</h2>
-
-    <div id="premi" class="svg_container">
+  <div id="ground" class="introduction_box">
+    <h2 id="first_title" class="title_one">Quando tutti vedevano solo nero</h2>
+    <h2 id="second_title" class="title_two">Noi vedevamo anche rosa</h2>
+    <div id="click" class="svg_container">
       <img src="img/325119.svg" alt="">
     </div>
-
   </div>
-
   <div id="root">
-
-
     <div class="carousel_wrapper">
-
       <div class="carousel_container">
-
         <div class="left_arrow">
           <i @click="prevImage" class="arrow fas fa-chevron-left"></i>
         </div>
-
         <div class="imgs_container">
           <img v-bind:src="images[imgIndex]" alt="">
         </div>
-
         <div class="right_arrow">
           <i @click="nextImage" class="arrow fas fa-chevron-right"></i>
         </div>
-
       </div>
-
       <div class="bullets_container">
         <i class="bull fas fa-circle" v-for="(item,index) in images" v-bind:class=" imgIndex == index ? 'active' : '' " @click="imgIndex = index"></i>
       </div>
-
     </div>
-
-
-
   </div>
-
-
   <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>
